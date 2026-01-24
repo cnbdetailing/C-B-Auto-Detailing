@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment - C&B Auto Detailing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+
+  <header class="bg-blue-900 text-white p-4 flex justify-between items-center sticky top-0 z-10">
+    <h1 class="text-2xl font-bold">C&B Auto Detailing</h1>
+    <nav class="space-x-4">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="services.html" class="hover:underline">Services</a>
+      <a href="book.html" class="hover:underline font-semibold">Book Now</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+      <button id="theme-toggle" class="ml-2 text-xl">☀️</button>
+    </nav>
+  </header>
+
+  <main class="flex-grow container mx-auto px-4 py-12 max-w-3xl">
+    <h2 class="text-4xl font-bold mb-8 text-center">Book Your Detail</h2>
+    
+    <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 space-y-6">
+      <div>
+        <label class="block mb-2 font-medium">Your Name</label>
+        <input type="text" name="name" required class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500">
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Email</label>
+        <input type="email" name="email" required class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500">
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Phone Number</label>
+        <input type="tel" name="phone" required class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500">
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Vehicle Type</label>
+        <select name="vehicle_type" required class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500">
+          <option value="">Select...</option>
+          <option value="Sedan">Sedan</option>
+          <option value="Truck / SUV">Truck / SUV</option>
+          <option value="Other (please specify in notes)">Other</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Choose Package</label>
+        <select name="package" required class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500">
+          <option value="">Select package...</option>
+          <option value="Interior Only">Interior Only ($200 Sedan / $285 Truck&SUV)</option>
+          <option value="Exterior Only">Exterior Only ($100 Sedan / $160 Truck&SUV)</option>
+          <option value="Basic Detail">Basic Detail ($185 Sedan / $220 Truck&SUV)</option>
+          <option value="Deluxe Detail">Deluxe Detail ($265 Sedan / $300 Truck&SUV)</option>
+          <option value="Ultimate Detail">Ultimate Detail ($300 Sedan / $350 Truck&SUV)</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Preferred Date</label>
+        <input type="date" name="date" required class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500">
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Preferred Time (we'll confirm availability)</label>
+        <input type="text" name="time" placeholder="e.g., Morning / Afternoon / Specific time" class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500">
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Additional Notes / Add-ons / Vehicle Details</label>
+        <textarea name="notes" rows="4" class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500" placeholder="e.g., leather seats, pet hair, oversized vehicle, etc."></textarea>
+      </div>
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-lg">Submit Booking Request</button>
+    </form>
+
+    <p class="text-center mt-6 text-gray-400">We'll confirm your appointment within 24 hours. Prefer to call or text? Reach us at <strong>707-407-9175</strong> or <strong>707-407-6903</strong>.</p>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-400 p-6 text-center">
+    <p>© 2026 C&B Auto Detailing • Redway / Garberville, California</p>
+    <p class="mt-2">Mobile service • Quality you can see • Book online 24/7</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      toggle.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
+
+</body>
+</html>
