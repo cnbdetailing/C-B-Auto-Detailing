@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>C&B Carwash & Auto Detailing | Sparkle & Shine, Every Time</title>
-  <meta name="description" content="Professional car detailing in Humboldt County, CA. Basic, Interior, Deluxe, and Ultimate packages. Call Christopher or Brian today!"/>
+  <meta name="description" content="Professional car detailing in Humboldt County, CA. Basic, Interior, Deluxe, and Ultimate packages. Book with Christopher or Brian today!"/>
   
   <!-- Modern fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
@@ -54,7 +54,7 @@
     }
     .services {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); /* One straight horizontal row */
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
       margin: 3rem 0;
     }
@@ -81,21 +81,22 @@
       color: #ffffff;
       margin: 1rem 0;
     }
-    .cta, .contact-link {
+    .cta {
       display: inline-block;
       background: var(--accent);
       color: #000;
-      padding: 1rem 2rem;
+      padding: 1.2rem 2.5rem;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      margin: 0.8rem 0;
-      transition: background 0.3s;
+      font-size: 1.2rem;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(0,240,255,0.3);
     }
-    .cta:hover, .contact-link:hover { background: var(--accent-dark); color: white; }
-    .booking-section {
-      text-align: center;
-      margin: 4rem 0 3rem;
+    .cta:hover {
+      background: var(--accent-dark);
+      color: white;
+      transform: scale(1.05);
     }
     .contact-section {
       text-align: center;
@@ -121,16 +122,12 @@
       margin-top: 3rem;
     }
     @media (max-width: 900px) {
-      .services {
-        grid-template-columns: 1fr; /* Stack on mobile */
-      }
+      .services { grid-template-columns: 1fr; }
       .card { padding: 2rem; }
       h1 { font-size: 2.2rem; }
     }
     @media (min-width: 601px) and (max-width: 900px) {
-      .services {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .services { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -172,14 +169,15 @@
       </div>
     </div>
 
-    <div class="booking-section">
-      <a href="tel:+17074079175" class="cta">BOOK YOUR DETAIL TODAY</a>
+    <div style="text-align:center; margin:4rem 0 3rem;">
+      <a href="https://app.squareup.com/appointments/book/3q0umo1pbnlg2t/LMPEWKKFX09HG/start" 
+         target="_blank" rel="noopener noreferrer" class="cta">BOOK YOUR DETAIL TODAY</a>
     </div>
 
     <div class="contact-section">
       <h2 style="color:var(--accent); margin-bottom:1.5rem;">Contact Us</h2>
-      <a href="tel:+17074079175" class="contact-link">Christopher: (707) 407-9175</a><br>
-      <a href="tel:+17074076903" class="contact-link">Brian: (707) 407-6903</a>
+      <a href="tel:+17074079175" class="contact-link" style="background:transparent; color:var(--text); font-weight:normal; padding:0; box-shadow:none;">Christopher: (707) 407-9175</a><br>
+      <a href="tel:+17074076903" class="contact-link" style="background:transparent; color:var(--text); font-weight:normal; padding:0; box-shadow:none;">Brian: (707) 407-6903</a>
 
       <div class="social">
         <p>Follow us for updates, before/afters, and promos:</p>
