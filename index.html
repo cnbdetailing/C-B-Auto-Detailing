@@ -1,63 +1,153 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>C&B Auto Detailing - Redway & Garberville, CA</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <meta name="description" content="Professional auto detailing in Redway and Garberville, California. Interior, Exterior, Basic, Deluxe & Ultimate packages. Book online!">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C&B Carwash & Auto Detailing | Sparkle & Shine, Every Time</title>
+  <meta name="description" content="Professional car detailing in Humboldt County, CA. Interior, Ultimate, and Deluxe packages. Book today!"/>
+  
+  <!-- Simple modern fonts from Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+  
+  <style>
+    :root {
+      --bg: #0a0e17;         /* Dark navy/black */
+      --accent: #00f0ff;     /* Bright teal/cyan */
+      --accent-dark: #00b7c3;
+      --text: #e0f7ff;
+      --card-bg: #111827;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      background: linear-gradient(to bottom, #000428, var(--bg));
+    }
+    .logo {
+      max-width: 90%;
+      height: auto;
+      margin: 0 auto 1rem;
+      display: block;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent);
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 15px var(--accent);
+    }
+    .tagline {
+      font-size: 1.3rem;
+      color: #a5f3fc;
+      margin-bottom: 1.5rem;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--accent-dark);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,240,255,0.15);
+    }
+    .card h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    .price {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #ffffff;
+      margin: 1rem 0;
+    }
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 1rem 0;
+      transition: background 0.3s;
+    }
+    .cta:hover { background: var(--accent-dark); color: white; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+    }
+  </style>
 </head>
-<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+<body>
 
-  <header class="bg-blue-900 text-white p-4 flex justify-between items-center sticky top-0 z-10">
-    <h1 class="text-2xl font-bold">C&B Auto Detailing</h1>
-    <nav class="space-x-4">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="services.html" class="hover:underline">Services</a>
-      <a href="book.html" class="hover:underline font-semibold">Book Now</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
-      <button id="theme-toggle" class="ml-2 text-xl">☀️</button>
-    </nav>
+  <header>
+    <img src="logo.png" alt="C&B Carwash Logo - Sleek teal sports car with water spray" class="logo"/>
+    <h1>C&B CARWASH</h1>
+    <p class="tagline">SPARKLE & SHINE, EVERY TIME</p>
+    <p>Serving Redway, Garberville, and surrounding Humboldt County, California</p>
   </header>
 
-  <main class="flex-grow container mx-auto px-4 py-12 max-w-5xl">
-    <section class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Professional Auto Detailing</h2>
-      <p class="text-xl mb-8 text-gray-300">Serving Redway, Garberville, and surrounding Humboldt County, California</p>
-      <a href="book.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg">Book Your Detail Today</a>
-    </section>
+  <div class="container">
+    <h2 style="text-align:center; color:var(--accent); margin:3rem 0 2rem;">Our Detailing Packages</h2>
+    
+    <div class="services">
+      <div class="card">
+        <h2>Interior Only</h2>
+        <div class="price">Sedans: $200<br>Trucks & SUVs: $285</div>
+        <p>Deep clean inside — steam, shampoo, leather conditioning & more.</p>
+      </div>
+      
+      <div class="card">
+        <h2>Ultimate Detail</h2>
+        <div class="price">Sedans: $300<br>Trucks & SUVs: $350</div>
+        <p>Full top-to-bottom protection — ceramic-ready shine & interior refresh.</p>
+      </div>
+      
+      <div class="card">
+        <h2>Deluxe Detail</h2>
+        <div class="price">Sedans: $265<br>Trucks & SUVs: $300</div>
+        <p>Balanced premium clean — steam interior + exterior decontamination.</p>
+      </div>
+    </div>
 
-    <section class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
-        <h3 class="text-2xl font-semibold mb-3 text-blue-400">Interior Only</h3>
-        <p class="text-lg mb-2">Sedans: $200 | Trucks & SUVs: $285</p>
-        <p class="text-gray-400">Deep clean inside — steam, shampoo, leather conditioning & more.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
-        <h3 class="text-2xl font-semibold mb-3 text-blue-400">Ultimate Detail</h3>
-        <p class="text-lg mb-2">Sedans: $300 | Trucks & SUVs: $350</p>
-        <p class="text-gray-400">Full top-to-bottom protection — ceramic-ready shine & interior refresh.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
-        <h3 class="text-2xl font-semibold mb-3 text-blue-400">Deluxe Detail</h3>
-        <p class="text-lg mb-2">Sedans: $265 | Trucks & SUVs: $300</p>
-        <p class="text-gray-400">Balanced premium clean — steam interior + exterior decontamination.</p>
-      </div>
-    </section>
-  </main>
+    <div style="text-align:center; margin:4rem 0;">
+      <a href="book.html" class="cta">BOOK YOUR DETAIL TODAY</a>
+      <!-- Add phone/email if you have them -->
+      <p style="margin-top:1.5rem;">Questions? Call or text us!</p>
+    </div>
+  </div>
 
-  <footer class="bg-gray-900 text-gray-400 p-6 text-center">
-    <p>© 2026 C&B Auto Detailing • Redway / Garberville, California</p>
-    <p class="mt-2">Mobile service • Quality you can see • Book online 24/7</p>
+  <footer>
+    © 2026 C&B Carwash & Auto Detailing • Redlands vibes, Humboldt service • Made with 💧 & ⚡
   </footer>
-
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    toggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      toggle.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
-    });
-  </script>
 
 </body>
 </html>
