@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>C&B Carwash & Auto Detailing | Sparkle & Shine, Every Time</title>
-  <meta name="description" content="Professional car detailing in Humboldt County, CA. Interior, Ultimate, and Deluxe packages. Book today!"/>
+  <meta name="description" content="Professional car detailing in Humboldt County, CA. Basic, Interior, Deluxe, and Ultimate packages. Call Christopher or Brian today!"/>
   
-  <!-- Simple modern fonts from Google -->
+  <!-- Modern fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
   
   <style>
     :root {
-      --bg: #0a0e17;         /* Dark navy/black */
-      --accent: #00f0ff;     /* Bright teal/cyan */
+      --bg: #0a0e17;
+      --accent: #00f0ff;
       --accent-dark: #00b7c3;
       --text: #e0f7ff;
       --card-bg: #111827;
@@ -81,7 +81,7 @@
       color: #ffffff;
       margin: 1rem 0;
     }
-    .cta {
+    .cta, .contact-link {
       display: inline-block;
       background: var(--accent);
       color: #000;
@@ -89,10 +89,25 @@
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      margin: 1rem 0;
+      margin: 0.8rem 0;
       transition: background 0.3s;
     }
-    .cta:hover { background: var(--accent-dark); color: white; }
+    .cta:hover, .contact-link:hover { background: var(--accent-dark); color: white; }
+    .contact-section {
+      text-align: center;
+      margin: 4rem 0 3rem;
+      font-size: 1.2rem;
+    }
+    .social {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+    }
+    .social a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .social a:hover { text-decoration: underline; }
     footer {
       text-align: center;
       padding: 2rem;
@@ -120,15 +135,15 @@
     
     <div class="services">
       <div class="card">
+        <h2>Basic Detail</h2>
+        <div class="price">Sedans: $185<br>Trucks & SUVs: $220</div>
+        <p>Essential clean — quick interior vacuum, wipe-down, and exterior wash for everyday shine.</p>
+      </div>
+
+      <div class="card">
         <h2>Interior Only</h2>
         <div class="price">Sedans: $200<br>Trucks & SUVs: $285</div>
         <p>Deep clean inside — steam, shampoo, leather conditioning & more.</p>
-      </div>
-      
-      <div class="card">
-        <h2>Ultimate Detail</h2>
-        <div class="price">Sedans: $300<br>Trucks & SUVs: $350</div>
-        <p>Full top-to-bottom protection — ceramic-ready shine & interior refresh.</p>
       </div>
       
       <div class="card">
@@ -136,17 +151,31 @@
         <div class="price">Sedans: $265<br>Trucks & SUVs: $300</div>
         <p>Balanced premium clean — steam interior + exterior decontamination.</p>
       </div>
+
+      <div class="card">
+        <h2>Ultimate Detail</h2>
+        <div class="price">Sedans: $300<br>Trucks & SUVs: $350</div>
+        <p>Full top-to-bottom protection — ceramic-ready shine & interior refresh.</p>
+      </div>
     </div>
 
-    <div style="text-align:center; margin:4rem 0;">
-      <a href="book.html" class="cta">BOOK YOUR DETAIL TODAY</a>
-      <!-- Add phone/email if you have them -->
-      <p style="margin-top:1.5rem;">Questions? Call or text us!</p>
+    <div class="contact-section">
+      <h2 style="color:var(--accent); margin-bottom:1.5rem;">Contact Us</h2>
+      <p>Call or text to book:</p>
+      <a href="tel:+17074079175" class="contact-link">Christopher: (707) 407-9175</a><br>
+      <a href="tel:+17074076903" class="contact-link">Brian: (707) 407-6903</a>
+
+      <div class="social">
+        <p>Follow us for updates, before/afters, and promos:</p>
+        <a href="https://www.instagram.com/cnbcarwash" target="_blank" rel="noopener noreferrer">@cnbcarwash on Instagram</a>
+      </div>
+
+      <a href="book.html" class="cta" style="margin-top:2rem;">BOOK YOUR DETAIL TODAY</a>
     </div>
   </div>
 
   <footer>
-    © 2026 C&B Carwash & Auto Detailing • Redlands vibes, Humboldt service • Made with 💧 & ⚡
+    © 2026 C&B Carwash & Auto Detailing • Humboldt County, CA • Sparkle & Shine, Every Time
   </footer>
 
 </body>
